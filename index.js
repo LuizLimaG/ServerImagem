@@ -5,7 +5,9 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://imagem-five.vercel.app/",
+}));
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
